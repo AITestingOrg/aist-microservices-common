@@ -10,7 +10,7 @@ public abstract class Event {
         this.id = id;
     }
 
-    public UUID getID() {
+    public UUID getId() {
         return id;
     }
 }

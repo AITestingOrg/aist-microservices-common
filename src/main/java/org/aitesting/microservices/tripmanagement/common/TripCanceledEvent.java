@@ -1,15 +1,14 @@
 package org.aitesting.microservices.tripmanagement.common;
 
+import org.aitesting.microservices.eventstore.Event;
+import org.aitesting.microservices.eventstore.Name;
+
 import java.util.UUID;
 
-public class TripCanceledEvent {
-    private UUID id;
+@Name("TripCanceledEvent")
+public class TripCanceledEvent extends Event {
 
     public TripCanceledEvent(UUID id) {
-        this.id = id;
-    }
-
-    public UUID getId() {
-        return id;
+        super(id);
     }
 }

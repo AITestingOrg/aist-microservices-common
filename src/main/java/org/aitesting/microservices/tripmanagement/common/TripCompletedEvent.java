@@ -1,15 +1,14 @@
 package org.aitesting.microservices.tripmanagement.common;
 
+import org.aitesting.microservices.eventstore.Event;
+import org.aitesting.microservices.eventstore.Name;
+
 import java.util.UUID;
 
-public class TripCompletedEvent {
-    private UUID id;
+@Name("TripCompletedEvent")
+public class TripCompletedEvent extends Event {
 
     public TripCompletedEvent(UUID id) {
-        this.id = id;
-    }
-
-    public UUID getId() {
-        return id;
+        super(id);
     }
 }
